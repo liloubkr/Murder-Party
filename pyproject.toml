@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alibi"
+version = "0.1.0"
+description = "Murder-mystery interrogation game with consistent, engine-controlled LLM suspects."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+
+[tool.setuptools.packages.find]
+include = ["alibi*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["models", ".cache", ".data"]
+
+[tool.ruff.lint]
+# D: docstrings are required by the module rules; T20: no stray print calls.
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "D", "T20"]
+ignore = ["D105", "D107"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"

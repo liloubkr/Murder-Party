@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Environments and secrets
+.venv/
+venv/
+.env
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local runtime data
+.cache/
+.data/
+*.db
+*.sqlite3
+
+# Trained artefacts (rebuilt by script)
+models/*
+!models/.gitkeep
+
+# Evaluation outputs
+eval/results/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

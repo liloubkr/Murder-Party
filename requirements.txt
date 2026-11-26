@@ -1,0 +1,15 @@
+# Runtime dependencies (Python 3.11). torch is installed from the CPU wheel index:
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+openai==3.60.0
+pydantic==2.14.4
+pydantic-settings==2.16.3
+pyyaml==6.0.4
+jinja2==3.1.6
+streamlit==1.67.0
+numpy==2.4.6
+pandas==3.1.1
+scikit-learn==1.9.1
+torch==2.15.0
+transformers==5.24.1
+sentence-transformers==6.3.0
+datasets==5.2.0
